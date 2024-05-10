@@ -1,10 +1,12 @@
 import Header from './components/Header';
+import Hero from './components/Hero';
 
 const App = () => {
   return (
-    <div>
+    <main className='bg-black' >
       <Header />
-    </div>
+      <Hero />
+    </main>
   )
 }
 

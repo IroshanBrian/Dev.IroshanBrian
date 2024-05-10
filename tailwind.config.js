@@ -7,8 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '',
-        secondary: '',
+        gray: {
+          DEFAULT: "#86868b",
+        }
       },
       fontFamily: {
         h1: ['Nunito'],

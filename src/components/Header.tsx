@@ -1,7 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Header() {
      const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+     const [isMobile, setIsMobile] = useState(window.innerWidth < 767 ? 'justify-end' : 'justify-center');
+
+     const handleMobileView = () => {
+          if (window.innerWidth <= 768) {
+               setIsMobile('justify-end')
+          } else {
+               setIsMobile('justify-center')
+          }
+     }
+
+     useEffect(() => {
+          window.addEventListener("resize", handleMobileView);
+          return () => {
+               window.removeEventListener("resize", handleMobileView);
+          }
+     }, [])
 
      const toggleMenu = () => {
           setIsMenuOpen(!isMenuOpen);
@@ -9,8 +26,8 @@ function Header() {
 
      return (
           <div>
-               <nav className="border-gray-200">
-                    <div className={`max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4`}>
+               <nav>
+                    <div className={`max-w-screen-xl flex flex-wrap items-center ${isMobile} mx-auto p-4`}>
                          <div>
 
                          </div>
@@ -23,22 +40,22 @@ function Header() {
                          <div className={isMenuOpen ? 'block w-full md:w-auto' : 'hidden w-full md:block md:w-auto'} id="navbar-solid-bg">
                               <ul className="flex flex-col font-medium mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent md:dark:bg-transparent">
                                    <li>
-                                        <a href="#" className="font-h1 font-bold block py-2 px-3 md:p-0 text-black md:bg-transparent md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+                                        <a href="#" className="font-h1 block py-2 px-3 md:p-0 text-gray md:bg-transparent transition-all md:hover:text-white">Home</a>
                                    </li>
                                    <li>
-                                        <a href="#" className="font-h1 font-bold block py-2 px-3 md:p-0 text-black md:hover:bg-transparent md:border-0 md:hover:text-blue-700  md:dark:hover:text-blue-500 hover:text-black md:dark:hover:bg-transparent">Projects</a>
+                                        <a href="#" className="font-h1 block py-2 px-3 md:p-0 text-gray md:hover:bg-transparent transition-all md:hover:text-white">Projects</a>
                                    </li>
                                    <li>
-                                        <a href="#" className="font-h1 font-bold block py-2 px-3 md:p-0 text-black md:hover:bg-transparent md:border-0 md:hover:text-blue-700  hover:text-black md:dark:hover:bg-transparent">About Me</a>
+                                        <a href="#" className="font-h1 block py-2 px-3 md:p-0 text-gray md:hover:bg-transparent transition-all md:hover:text-white">About Me</a>
                                    </li>
                                    <li>
-                                        <a href="#" className="font-h1 font-bold block py-2 px-3 md:p-0 text-black md:hover:bg-transparent md:border-0 md:hover:text-blue-700  hover:text-black md:dark:hover:bg-transparent">Contact Me</a>
+                                        <a href="#" className="font-h1 block py-2 px-3 md:p-0 text-gray md:hover:bg-transparent transition-all md:hover:text-white">Contact Me</a>
                                    </li>
                               </ul>
                          </div>
                     </div>
-               </nav>
-          </div>
+               </nav >
+          </div >
      );
 }
 
