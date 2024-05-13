@@ -13,6 +13,8 @@ export default {
       },
       fontFamily: {
         h1: ['Nunito'],
+        h2: ['Jersey'],
+        title: ['Poppins'],
       }
     },
   },
