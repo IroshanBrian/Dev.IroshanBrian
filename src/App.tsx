@@ -1,11 +1,11 @@
 import Header from './components/Header';
-import Hero from './components/Hero';
+import { Bg } from './components/ui/Bg';
 
 const App = () => {
   return (
-    <main className='bg-[#092635]' >
+    <main>
       <Header />
-      <Hero />
+      <Bg />
     </main>
   )
 }

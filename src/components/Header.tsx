@@ -1,24 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import logo from '../assets/iB.png'
 
 function Header() {
      const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-     const [isMobile, setIsMobile] = useState(window.innerWidth < 767 ? 'justify-end' : 'justify-center');
-
-     const handleMobileView = () => {
-          if (window.innerWidth <= 768) {
-               setIsMobile('justify-end')
-          } else {
-               setIsMobile('justify-center')
-          }
-     }
-
-     useEffect(() => {
-          window.addEventListener("resize", handleMobileView);
-          return () => {
-               window.removeEventListener("resize", handleMobileView);
-          }
-     }, [])
 
      const toggleMenu = () => {
           setIsMenuOpen(!isMenuOpen);
@@ -26,10 +11,10 @@ function Header() {
 
      return (
           <div>
-               <nav>
-                    <div className={`max-w-screen-xl flex flex-wrap items-center ${isMobile} mx-auto p-4`}>
-                         <div>
-
+               <nav className='bg-black'>
+                    <div className={`max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4`}>
+                         <div className='p-1'>
+                              <img src={logo} alt="" width={48} />
                          </div>
                          <button onClick={toggleMenu} type="button" className="inline-flex p-2 w-10 h-10 justify-items-end text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400" aria-controls="navbar-solid-bg" aria-expanded="false">
                               <span className="sr-only">Open main menu</span>
