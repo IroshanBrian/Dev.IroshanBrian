@@ -1,12 +1,14 @@
 import Header from './components/Header';
-import { Bg } from './components/ui/Bg';
+import { HeroHighlightDemo } from './components/HeroHighlightDemo';
 
 const App = () => {
   return (
-    <main>
+    <>
       <Header />
-      <Bg />
-    </main>
+      <main className='bg-black'>
+        <HeroHighlightDemo />
+      </main>
+    </>
   )
 }
 
