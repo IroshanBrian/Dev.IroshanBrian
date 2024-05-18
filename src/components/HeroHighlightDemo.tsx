@@ -22,13 +22,13 @@ export function HeroHighlightDemo() {
                     className="relative text-4xl px-4 font-pop font-black md:text-4xl lg:text-5xl text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
                >
                     Hey, I'm Brian.<br />{" "}
-                    <Highlight className="text-2xl">
+                    <Highlight className="text-3xl font-semibold">
                          Full-Stack Developer.
                     </Highlight>
                </motion.h1>
                <motion.div>
                     <div className="bg-white lg:w-[400px] sm:w-[350px] h-[200px] rounded-full overflow-hidden">
-                         <img src={me} alt="" width={550} className="relative lg:bottom-[8rem] md:bottom-[8rem] bottom-[9rem]" />
+                         <img src={me} alt="" width={400} className="relative lg:bottom-[8rem] md:bottom-[8rem] bottom-[9rem]" />
                     </div>
                </motion.div>
           </HeroHighlight>
