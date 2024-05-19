@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from "./ui/hero-highlight";
+import { HeroHighlight, Highlight } from "../components/ui/hero-highlight";
 import me from '../assets/me.png'
 
 export function HeroHighlightDemo() {
@@ -19,11 +19,11 @@ export function HeroHighlightDemo() {
                          duration: 0.5,
                          ease: [0.4, 0.0, 0.2, 1],
                     }}
-                    className="text-4xl px-4 font-pop font-black md:text-4xl lg:text-5xl text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
+                    className="text-4xl px-4 font-title font-black md:text-4xl lg:text-5xl text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
                >
-                    Hey, I'm Brian.<br />{" "}
+                    Hey, I'm Brian<span className="text-cyan-500 text-5xl">.</span><br />{" "}
                     <Highlight className="text-3xl font-semibold">
-                         Full-Stack Developer.
+                         Full-Stack Developer
                     </Highlight>
                </motion.h1>
                <motion.div>
