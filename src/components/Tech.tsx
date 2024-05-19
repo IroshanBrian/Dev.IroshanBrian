@@ -10,7 +10,7 @@ import SkillsCard from './ui/SkillsCard';
 const Tech = () => {
      return (
           <section className="h-max py-12">
-               <div className="max-w-6xl mx-auto px-4">
+               <div className="max-w-6xl mx-auto px-4 py-10">
                     <motion.div
                          initial={{ opacity: 0, y: -50 }}
                          animate={{ opacity: 1, y: 0 }}
