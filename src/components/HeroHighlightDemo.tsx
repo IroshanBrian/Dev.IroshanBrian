@@ -19,7 +19,7 @@ export function HeroHighlightDemo() {
                          duration: 0.5,
                          ease: [0.4, 0.0, 0.2, 1],
                     }}
-                    className="relative text-4xl px-4 font-pop font-black md:text-4xl lg:text-5xl text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
+                    className="text-4xl px-4 font-pop font-black md:text-4xl lg:text-5xl text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
                >
                     Hey, I'm Brian.<br />{" "}
                     <Highlight className="text-3xl font-semibold">

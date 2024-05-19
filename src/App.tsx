@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import About from './components/About';
 import { HeroHighlightDemo } from './components/HeroHighlightDemo';
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
       <Header />
       <main className='bg-black'>
         <HeroHighlightDemo />
+        <About />
       </main>
     </>
   )
