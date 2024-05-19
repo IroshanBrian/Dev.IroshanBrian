@@ -12,7 +12,7 @@ const About = () => {
                     <div className="flex flex-wrap lg:flex-nowrap font-pop space-y-8 lg:space-y-0 lg:space-x-8">
                          <div className="text-white lg:w-1/2">
                               <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-                              <p className="leading-relaxed">I am a professional full stack developer with 5+ years of experience in website development. I specialize in developing and maintaining web applications using a variety of programming languages.</p>
+                              <p className="leading-relaxed">I am a self taught professional full stack developer with 3+ years of experience in website development. I specialize in developing and maintaining web applications using a variety of programming languages.</p>
                          </div>
                          <div className="lg:w-1/2 grid grid-cols-2 gap-4">
                               <div className="col-span-1">
