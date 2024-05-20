@@ -25,7 +25,7 @@ const Projects = () => {
                     <div className="flex justify-center flex-wrap max-w-5xl mx-auto mt-10 gap-10 gap-y-20">
                          <ProjectCard projectName='NatureLanka Travels' projectDesc='Tour Agency based in Germeny Still in Development and will launch soon..' projectImg={project3} />
                          <ProjectCard projectName='3D Portfolio' projectDesc='3D porfolio website that i made while learning ThreeJs and GSAP' projectImg={project1} />
-                         <ProjectCard projectName='INFI-NITY' projectDesc='A Website that i made for get-togather party Framer Motion and GSAP' projectImg={project2} />
+                         <ProjectCard projectName='INFI-NITY' projectDesc='A Website that i made for get-togather party using Framer Motion and GSAP' projectImg={project2} />
                     </div>
                </div>
           </section >
