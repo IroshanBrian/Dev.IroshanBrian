@@ -6,7 +6,7 @@ import project3 from '../assets/project/4.jpg'
 
 const Projects = () => {
      return (
-          <section id='#projects' className="h-max py-12">
+          <section id='projects' className="h-max py-12">
                <div className="max-w-6xl mx-auto px-4 py-10">
                     <motion.div
                          initial={{ opacity: 0, y: -50 }}
