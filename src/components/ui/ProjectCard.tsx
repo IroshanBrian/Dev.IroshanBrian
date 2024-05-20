@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ projectName, projectDesc, projectImg }) => {
      return (
-          <div className="flex items-center justify-center">
+          <div className="relative z-30 flex items-center justify-center">
                <PinContainer
                     title={projectName}
                     href=""
