@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <main className='bg-[#0a0a0a]'>
+      <main className='bg-black'>
         <HeroHighlightDemo />
         <About />
         <Tech />
