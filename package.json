@@ -21,8 +21,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.0",
-    "react-three": "^0.9.7",
-    "react-three-fiber": "^6.0.13",
     "tailwind-merge": "^2.3.0",
     "three": "^0.164.1"
   },
