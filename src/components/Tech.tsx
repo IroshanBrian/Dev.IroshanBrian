@@ -7,6 +7,7 @@ import laravel from '../assets/techstack/laravel.png';
 import mongodb from '../assets/techstack/mongodb.png';
 import SkillsCard from './ui/SkillsCard';
 
+
 const Tech = () => {
      return (
           <section className="h-max py-12">
