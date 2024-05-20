@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import EarthCanvas from "./canvas/Earth.js";
 import { slideIn } from "../utils/motion";
 
-
 const Contact = () => {
      const [result, setResult] = useState("");
 
-     const onSubmit = async (e) => {
+     const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
           e.preventDefault();
           setResult("Sending....");
-          const formData = new FormData(e.target);
+          const formData = new FormData(e.currentTarget);
 
           formData.append("access_key", "6519de1b-fbad-447c-97e6-f1852928f3f8");
 
@@ -24,7 +23,6 @@ const Contact = () => {
 
                if (data.success) {
                     setResult("Message Sent Successfully!");
-                    e.target.reset();
                } else {
                     console.error("Error", data);
                     setResult(data.message);
