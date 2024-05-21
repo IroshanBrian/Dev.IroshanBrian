@@ -3,12 +3,14 @@ import Tech from './components/Tech';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import { Suspense, lazy } from 'react';
 import { HeroHighlightDemo } from './components/HeroHighlightDemo';
 
 const App = () => {
   return (
     <>
-      <Header />
+      <lazy> <Header /> </lazy>
+
       <main className='bg-black'>
         <HeroHighlightDemo />
         <About />
@@ -16,7 +18,7 @@ const App = () => {
         <Projects />
         <Contact />
       </main>
-    </>
+    </lazy >
   )
 }
 
