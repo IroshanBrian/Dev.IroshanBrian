@@ -9,8 +9,6 @@ import { HeroHighlightDemo } from './components/HeroHighlightDemo';
 const App = () => {
   return (
     <>
-      <lazy> <Header /> </lazy>
-
       <main className='bg-black'>
         <HeroHighlightDemo />
         <About />
@@ -18,7 +16,7 @@ const App = () => {
         <Projects />
         <Contact />
       </main>
-    </lazy >
+    </>
   )
 }
 
