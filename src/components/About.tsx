@@ -52,7 +52,7 @@ const About = () => {
           <>
                <Helmet>
                     <title>About | Iroshan Brian</title>
-                    <meta name="description" content="About Brian's journey of programming and socials" />
+                    <meta name="description" content="About Brian's journey of programming and socials." />
                     <link rel="canonical" href="#about" />
                </Helmet>
                <section id="about" className="h-max py-12">
