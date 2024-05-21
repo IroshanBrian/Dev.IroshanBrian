@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-const Header = lazy(() => import('./components/Header'))
+import Header from './components/Header'
 const Tech = lazy(() => import('./components/Tech'))
 const About = lazy(() => import('./components/About'))
 const Projects = lazy(() => import('./components/Projects'))
