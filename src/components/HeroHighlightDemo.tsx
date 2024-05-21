@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "../components/ui/hero-highlight";
-import me from '../assets/me.png'
+import me from '../assets/me.webp'
 
 export function HeroHighlightDemo() {
      return (

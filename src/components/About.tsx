@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import grid1 from '../assets/grid/grid1.jpg';
-import grid2 from '../assets/grid/grid2.jpeg';
-import grid3 from '../assets/grid/grid3.jpeg';
+import grid1 from '../assets/grid/grid1.webp';
+import grid2 from '../assets/grid/grid2.webp';
+import grid3 from '../assets/grid/grid3.webp';
 import { AnimatedTooltip } from './ui/animated-tooltip';
 
 const About = () => {

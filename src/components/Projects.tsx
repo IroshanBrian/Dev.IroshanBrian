@@ -1,8 +1,8 @@
 import ProjectCard from './ui/ProjectCard'
 import { motion } from 'framer-motion'
-import project1 from '../assets/project/2.jpg'
-import project2 from '../assets/project/3.jpg'
-import project3 from '../assets/project/4.jpg'
+import project1 from '../assets/project/2.webp'
+import project2 from '../assets/project/3.webp'
+import project3 from '../assets/project/4.webp'
 
 const Projects = () => {
      return (

@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import react from '../assets/techstack/React.webp';
-import node from '../assets/techstack/node.png';
+import node from '../assets/techstack/node.webp';
 import ex from '../assets/techstack/ex.png';
 import laravel from '../assets/techstack/laravel.png';
 import mongodb from '../assets/techstack/mongodb.png';
