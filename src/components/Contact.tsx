@@ -108,7 +108,7 @@ const Contact = () => {
                               className="flex-1 bg-black-100 p-6 rounded-2xl"
                          >
                               <form onSubmit={onSubmit} className="flex flex-col gap-8" data-netlify="true">
-                                   <input type="hidden" name="from_name" value="IB." />
+                                   <input type="hidden" name="from_name" value="IroshanBrian." />
                                    <label className="flex flex-col">
                                         <span className="text-white font-medium mb-4">Your Name</span>
                                         <input
