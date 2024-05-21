@@ -3,16 +3,10 @@ import { motion } from 'framer-motion'
 import project1 from '../assets/project/2.webp'
 import project2 from '../assets/project/3.webp'
 import project3 from '../assets/project/4.webp'
-import { Helmet } from 'react-helmet-async'
 
 const Projects = () => {
      return (
           <>
-               <Helmet>
-                    <title>Projects | Iroshan Brian</title>
-                    <meta name="description" content="Some of Brian's latest projects." />
-                    <link rel="canonical" href="#projects" />
-               </Helmet>
                <section id='projects' className="h-max py-12">
                     <div className="max-w-6xl mx-auto px-4 py-10">
                          <motion.div

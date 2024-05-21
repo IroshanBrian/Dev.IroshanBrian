@@ -3,7 +3,6 @@ import grid1 from '../assets/grid/grid1.webp';
 import grid2 from '../assets/grid/grid2.webp';
 import grid3 from '../assets/grid/grid3.webp';
 import { AnimatedTooltip } from './ui/animated-tooltip';
-import { Helmet } from 'react-helmet-async';
 
 const About = () => {
      const people = [
@@ -50,11 +49,6 @@ const About = () => {
      ];
      return (
           <>
-               <Helmet>
-                    <title>About | Iroshan Brian</title>
-                    <meta name="description" content="About Brian's journey of programming and socials." />
-                    <link rel="canonical" href="#about" />
-               </Helmet>
                <section id="about" className="h-max py-12">
                     <div className="max-w-6xl mx-auto px-4">
                          <motion.div

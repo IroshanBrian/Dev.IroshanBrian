@@ -2,8 +2,6 @@ import { useEffect, useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import EarthCanvas from "./canvas/Earth.js";
 import { slideIn } from "../utils/motion";
-import { Helmet } from "react-helmet-async";
-
 const Contact = () => {
      const [result, setResult] = useState("");
 
@@ -47,11 +45,6 @@ const Contact = () => {
 
      return (
           <>
-               <Helmet>
-                    <title>Contact | Iroshan Brian</title>
-                    <meta name="description" content="Contact Brian for work." />
-                    <link rel="canonical" href="#contact" />
-               </Helmet>
                <section id="contact" className="py-12">
                     <div className="max-w-6xl mx-auto px-4">
                          <motion.div
