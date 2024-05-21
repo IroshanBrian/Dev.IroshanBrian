@@ -1,9 +1,42 @@
 "use client";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "../components/ui/hero-highlight";
-import me from '../assets/me.webp'
+import me from '../assets/me.webp';
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+interface TimeResponse {
+     year: number;
+     month: number;
+     day: number;
+     hour: number;
+     minute: number;
+     seconds: number;
+     milliSeconds: number;
+     dateTime: string;
+     date: string;
+     time: string;
+     timeZone: string;
+     dayOfWeek: string;
+     dstActive: boolean;
+}
 
 export function HeroHighlightDemo() {
+     const [timeData, setTimeData] = useState<TimeResponse | null>(null);
+
+     useEffect(() => {
+          const fetchTime = async () => {
+               try {
+                    const response = await axios.get<TimeResponse>('https://timeapi.io/api/Time/current/zone?timeZone=Asia/Kolkata');
+                    console.log(response)
+               } catch (err) {
+                    console.log(err);
+               }
+          };
+
+          fetchTime();
+     }, []);
+
      return (
           <HeroHighlight className="flex flex-col gap-10">
                <motion.h1
@@ -29,6 +62,11 @@ export function HeroHighlightDemo() {
                <motion.div>
                     <div className="bg-white lg:w-[400px] sm:w-[350px] h-[200px] rounded-full overflow-hidden">
                          <img src={me} alt="" width={400} className="relative lg:bottom-[8rem] md:bottom-[8rem] bottom-[9rem]" />
+                    </div>
+               </motion.div>
+               <motion.div>
+                    <div className="bg-white lg:w-[200px] sm:w-[350px] h-[40px] rounded-full overflow-hidden text-center">
+                         <h3>Time: {timeData ? timeData.time : "Loading..."}</h3>
                     </div>
                </motion.div>
           </HeroHighlight>
