@@ -107,7 +107,7 @@ const Contact = () => {
                               variants={slideIn("left", "tween", 0.2, 1)}
                               className="flex-1 bg-black-100 p-6 rounded-2xl"
                          >
-                              <form onSubmit={onSubmit} className="flex flex-col gap-8">
+                              <form onSubmit={onSubmit} className="flex flex-col gap-8" data-netlify="true">
                                    <input type="hidden" name="from_name" value="IB." />
                                    <label className="flex flex-col">
                                         <span className="text-white font-medium mb-4">Your Name</span>
