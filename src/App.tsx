@@ -1,4 +1,5 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
+import Preloader from './components/Preloader';
 import Header from './components/Header'
 const Tech = lazy(() => import('./components/Tech'))
 const About = lazy(() => import('./components/About'))
@@ -11,24 +12,39 @@ import ProjectsSkeleton from './components/skeletons/ProjectsSkeleton';
 import TechSkeleton from './components/skeletons/TechSkeleton';
 
 const App = () => {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
-      <Header />
-      <main className='bg-black'>
-        <HeroHighlightDemo />
-        <Suspense fallback={<AboutSkeleton />}>
-          <About />
-        </Suspense>
-        <Suspense fallback={<TechSkeleton />}>
-          <Tech />
-        </Suspense>
-        <Suspense fallback={<ProjectsSkeleton />}>
-          <Projects />
-        </Suspense>
-        <Suspense fallback={<ContactSkeleton />}>
-          <Contact />
-        </Suspense>
-      </main>
+      {loading ? (
+        <Preloader />
+      ) : (
+        <><Header />
+          <main className='bg-black'>
+            <HeroHighlightDemo />
+            <Suspense fallback={<AboutSkeleton />}>
+              <About />
+            </Suspense>
+            <Suspense fallback={<TechSkeleton />}>
+              <Tech />
+            </Suspense>
+            <Suspense fallback={<ProjectsSkeleton />}>
+              <Projects />
+            </Suspense>
+            <Suspense fallback={<ContactSkeleton />}>
+              <Contact />
+            </Suspense>
+          </main>
+        </>
+      )}
     </>
   )
 }
