@@ -1,5 +1,5 @@
 import INFI from '../assets/iB.webp'
-import crown from '../assets/crown.png'
+import crown from '../assets/crown.webp'
 import { motion } from 'framer-motion';
 
 const Preloader: React.FC = () => {
