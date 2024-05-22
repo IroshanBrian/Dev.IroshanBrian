@@ -3,6 +3,8 @@ import grid1 from '../assets/grid/grid1.webp';
 import grid2 from '../assets/grid/grid2.webp';
 import grid3 from '../assets/grid/grid3.webp';
 import { AnimatedTooltip } from './ui/animated-tooltip';
+import { Suspense } from 'react';
+import CanvasLoader from './Loader';
 
 const About = () => {
      const people = [
@@ -111,30 +113,32 @@ const About = () => {
                                    transition={{ duration: 0.5, delay: 0.4 }}
                                    className="lg:w-1/2 grid grid-cols-2 gap-4"
                               >
-                                   <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ duration: 0.5, delay: 0.5 }}
-                                        className="col-span-1"
-                                   >
-                                        <img src={grid1} alt="Description 1" className="w-full h-auto rounded-lg shadow-lg" />
-                                   </motion.div>
-                                   <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ duration: 0.5, delay: 1 }}
-                                        className="col-span-1 overflow-hidden rounded-lg "
-                                   >
-                                        <img src={grid2} alt="Description 2" className="w-full h-auto rounded-lg shadow-lg scale-[1.2]" />
-                                   </motion.div>
-                                   <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ duration: 0.5, delay: 1.5 }}
-                                        className="col-span-2"
-                                   >
-                                        <img src={grid3} alt="Description 3" className="w-full h-auto rounded-lg shadow-lg" />
-                                   </motion.div>
+                                   <Suspense fallback={<CanvasLoader />}>
+                                        <motion.div
+                                             initial={{ opacity: 0 }}
+                                             animate={{ opacity: 1 }}
+                                             transition={{ duration: 0.5, delay: 0.5 }}
+                                             className="col-span-1"
+                                        >
+                                             <img src={grid1} alt="Description 1" className="w-full h-auto rounded-lg shadow-lg" />
+                                        </motion.div>
+                                        <motion.div
+                                             initial={{ opacity: 0 }}
+                                             animate={{ opacity: 1 }}
+                                             transition={{ duration: 0.5, delay: 1 }}
+                                             className="col-span-1 overflow-hidden rounded-lg "
+                                        >
+                                             <img src={grid2} alt="Description 2" className="w-full h-auto rounded-lg shadow-lg scale-[1.2]" />
+                                        </motion.div>
+                                        <motion.div
+                                             initial={{ opacity: 0 }}
+                                             animate={{ opacity: 1 }}
+                                             transition={{ duration: 0.5, delay: 1.5 }}
+                                             className="col-span-2"
+                                        >
+                                             <img src={grid3} alt="Description 3" className="w-full h-auto rounded-lg shadow-lg" />
+                                        </motion.div>
+                                   </Suspense>
                               </motion.div>
                          </div>
                     </div>

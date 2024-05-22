@@ -1,6 +1,8 @@
 import INFI from '../assets/iB.webp'
 import crown from '../assets/crown.webp'
 import { motion } from 'framer-motion';
+import { Suspense } from 'react';
+import CanvasLoader from './Loader';
 
 const Preloader: React.FC = () => {
      return (
@@ -13,10 +15,12 @@ const Preloader: React.FC = () => {
                >
                </motion.div>
                <div className='w-10 h-20 flex justify-center align-middle absolute'>
-                    <motion.img
-                         src={INFI} alt="" className='w-10 mt-10 ml-1 bg-black absolute' />
-                    <motion.img
-                         src={crown} alt="" className='w-8 h-8 mt-[0.6rem] relative' />
+                    <Suspense fallback={<CanvasLoader />}>
+                         <motion.img
+                              src={INFI} alt="" className='w-10 mt-10 ml-1 bg-black absolute' />
+                         <motion.img
+                              src={crown} alt="" className='w-8 h-8 mt-[0.6rem] relative' />
+                    </Suspense>
                </div>
           </div>
      );
