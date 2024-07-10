@@ -29,8 +29,8 @@ export function HeroHighlightDemo() {
                     </Highlight>
                </motion.h1>
                <motion.div>
-                    <div className="bg-white lg:w-[400px] sm:w-[350px] h-[200px] rounded-full overflow-hidden">
-                         <img src={me} alt="Iroshan Brian" width={400} className="relative lg:bottom-[8rem] md:bottom-[8rem] bottom-[9rem]" />
+                    <div className="bg-white lg:w-[400px] sm:w-[350px] h-[200px] rounded-full flex justify-center overflow-hidden">
+                         <img src={me} alt="Iroshan Brian" width={200} className="absolute lg:bottom-[0rem] md:bottom-[0rem] bottom-[0rem]" />
                     </div>
                </motion.div>
                {/* <motion.div>
