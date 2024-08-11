@@ -5,6 +5,9 @@ import grid3 from '../assets/grid/grid3.webp';
 import { AnimatedTooltip } from './ui/animated-tooltip';
 import { Suspense } from 'react';
 import CanvasLoader from './Loader';
+import "react-vertical-timeline-component/style.min.css";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import { experiences } from "../constants/index.js";
 
 const About = () => {
      const people = [
@@ -140,6 +143,57 @@ const About = () => {
                                         </motion.div>
                                    </Suspense>
                               </motion.div>
+                         </div>
+                    </div>
+               </section>
+               <section >
+                    <div className='max-w-6xl mx-auto px-4'>
+                         <h2 className="text-white text-4xl font-extrabold border-b-2 border-cyan-500 pb-2">Work Experience<span className="text-cyan-200 text-5xl">.</span></h2>
+                         <div className='mt-5 flex flex-col gap-3 text-white'>
+                              <p>
+                                   I've worked with all sorts of companies, leveling up my skills and
+                                   teaming up with smart people. Here's the rundown:
+                              </p>
+                         </div>
+
+                         <div className='mt-12 flex'>
+                              <VerticalTimeline>
+                                   {experiences.map((experience, index) => (
+                                        <VerticalTimelineElement
+                                             className='text-slate-400'
+                                             key={experience.company_name}
+                                             date={experience.date}
+                                             iconStyle={{ background: experience.iconBg }}
+                                             icon={
+                                                  <div className='flex justify-center items-center w-full h-full'>
+                                                       <img
+                                                            src={experience.icon}
+                                                            alt={experience.company_name}
+                                                            className='w-[60%] h-[60%] object-contain'
+                                                       />
+                                                  </div>
+                                             }
+                                             contentStyle={{
+                                                  borderBottom: "8px",
+                                                  borderStyle: "solid",
+                                                  borderBottomColor: experience.iconBg,
+                                                  boxShadow: "none",
+                                             }}
+                                        >
+                                             <div>
+                                                  <h3 className='text-black text-xl font-poppins font-semibold'>
+                                                       {experience.title}
+                                                  </h3>
+                                                  <p
+                                                       className='text-black-500 font-medium text-base'
+                                                       style={{ margin: 0 }}
+                                                  >
+                                                       {experience.company_name}
+                                                  </p>
+                                             </div>
+                                        </VerticalTimelineElement>
+                                   ))}
+                              </VerticalTimeline>
                          </div>
                     </div>
                </section>
