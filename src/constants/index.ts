@@ -1,5 +1,15 @@
-import { flox, infi, navi } from "../assets/images";
-export const experiences = [
+import images from '../assets/images';
+
+export type Experience = {
+     company_name: string;
+     date: string;
+     icon: string;
+     iconBg: string;
+     title: string;
+     points: string[];
+};
+
+export const experiences: Experience[] = [
      {
           title: "Freelance Graphics Designer",
           company_name: "Fiverr",
@@ -29,7 +39,7 @@ export const experiences = [
      {
           title: "Content Creator",
           company_name: "NavigatSL",
-          icon: navi,
+          icon: images.navi,  // Updated to use imported image
           iconBg: "#FFF1DB",
           date: "May 2024 - Present",
           points: [
@@ -42,7 +52,7 @@ export const experiences = [
      {
           title: "CEO",
           company_name: "FloxTravel",
-          icon: flox,
+          icon: images.flox,  // Updated to use imported image
           iconBg: "#a2d2ff",
           date: "June 2024 - Present",
           points: [
@@ -55,7 +65,7 @@ export const experiences = [
      {
           title: "Founder & CEO",
           company_name: "INFI Digital",
-          icon: infi,
+          icon: images.infi,  // Updated to use imported image
           iconBg: "#b7e4c7",
           date: "July 2024 - Present",
           points: [
@@ -68,7 +78,7 @@ export const experiences = [
      {
           title: "Full-Stack Developer",
           company_name: "INFI Digital",
-          icon: infi,
+          icon: images.infi,  // Updated to use imported image
           iconBg: "#b7e4c7",
           date: "July 2024 - Present",
           points: [
