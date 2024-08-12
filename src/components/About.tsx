@@ -9,6 +9,14 @@ import "react-vertical-timeline-component/style.min.css";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import { experiences } from "../constants/index.js";
 
+type Experience = {
+     company_name: string;
+     date: string;
+     icon: string;
+     iconBg: string;
+     title: string;
+};
+
 const About = () => {
      const people = [
           {
@@ -158,7 +166,7 @@ const About = () => {
 
                          <div className='mt-12 flex'>
                               <VerticalTimeline>
-                                   {experiences.map((experience, index) => (
+                                   {experiences.map((experience: Experience, index: number) => (
                                         <VerticalTimelineElement
                                              className='text-slate-400'
                                              key={experience.company_name}
